@@ -1,2 +1,2 @@
 # Machine-Learning
-This is my machine learning projects for studying
+This is my machine learning file for studying
