@@ -1,3 +1,4 @@
+# Classification
 class KNN_Classifier:
     def __init__(self, n_neighbors=5, p=2):
         self.k = n_neighbors
@@ -59,3 +60,9 @@ class KNN_Classifier:
                 count += 1
 
         return count/len(X)
+    
+
+
+# Regression
+class KNN_Regression:
+    pass
