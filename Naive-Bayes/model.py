@@ -12,11 +12,14 @@ class GaussianNB:
 
     def __separate_classes(self, X, y):
         n_samples = X.shape[0]
-        X_c = dict().fromkeys(self.__classes, [])
+        X_c = dict().fromkeys(self.__classes)
         self.__priors = self.__priors.fromkeys(self.__classes, 0)
 
         for i in range(n_samples):
-            X_c[y[i]].append(X[i])
+            if X_c[y[i]] is None:
+                X_c[y[i]] = [X[i]]
+            else:
+                X_c[y[i]].append(X[i])
 
             self.__priors[y[i]] += 1/n_samples
 

@@ -20,8 +20,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # K-Nearest Neighbors Regression
 model = KNN_Regression()
 model.fit(X_train, y_train)
-y_predicted = model.predict(X_test)
-
 
 print("The accuracy of my model: {}%".format(model.score(X_test, y_test) *100))
 
@@ -31,8 +29,6 @@ print("The accuracy of my model: {}%".format(model.score(X_test, y_test) *100))
 # # K-Nearest Neighbors Classification
 # model = KNeighborsClassifier()
 # model.fit(X_train, y_train)
-# y_predicted = model.predict(X_test)
-
 
 # print("The accuracy of Sklearn's model: {}%".format(model.score(X_test, y_test) *100))
 
@@ -40,7 +36,5 @@ print("The accuracy of my model: {}%".format(model.score(X_test, y_test) *100))
 # K-Nearest Neighbors Regression
 model = KNeighborsRegressor()
 model.fit(X_train, y_train)
-y_predicted = model.predict(X_test)
-
 
 print("The accuracy of Sklearn's model: {}%".format(model.score(X_test, y_test) *100))
