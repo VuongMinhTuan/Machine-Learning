@@ -13,7 +13,7 @@ class LinearRegression:
         Xbar = np.concatenate((one, X), axis= 1)
         
         w = np.dot(np.linalg.pinv(np.dot(Xbar.T, Xbar)), np.dot(Xbar.T, y))
-        self.weight = np.array([w[1:]]).T
+        self.weight = np.array([w[1:3]]).T
         self.bias = w[0]
 
 
