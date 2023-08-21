@@ -3,7 +3,7 @@ import numpy as np
 
 
 class LinearRegression:
-    def __init__(self, lr= 0.1, max_iters= 1000):
+    def __init__(self, lr= 0.001, max_iters= 10000):
         self.__w = None
         self.__b = None
         self.__lr = lr
@@ -26,7 +26,7 @@ class LinearRegression:
             w_new = self.__w - np.dot(self.__lr, dw)
             b_new = self.__b - self.__b * db
 
-            if np.sum(w_new - self.__w) <= 0.001 * n_samples and b_new - self.__b < 0.001:
+            if np.sum(w_new - self.__w) <= 0.001 * n_features and b_new - self.__b < 0.001:
                 break
 
             self.__w = w_new
