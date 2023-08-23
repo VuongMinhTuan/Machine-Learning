@@ -15,10 +15,8 @@ class LinearRegression:
         n_samples, n_features = X.shape
         self.__w = np.zeros(n_features)
         self.__b = 0
-        it = 0
 
         for _ in range(self.__n_iters):
-            it += 1
 
             dw = (1/n_samples) * np.dot(X.T, np.dot(X, self.__w) + self.__b - y)
             db = (1/n_samples) * np.sum(np.dot(X, self.__w) + self.__b - y)
