@@ -22,7 +22,7 @@ class LinearRegression:
             db = (1/n_samples) * np.sum(np.dot(X, self.__w) + self.__b - y)
 
             w_new = self.__w - np.dot(self.__lr, dw)
-            b_new = self.__b - self.__b * db
+            b_new = self.__b - self.__lr * db
 
             if np.sum(w_new - self.__w) <= 0.001 * n_features and b_new - self.__b <= 0.001:
                 break
